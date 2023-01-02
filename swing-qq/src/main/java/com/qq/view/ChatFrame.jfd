@@ -1,0 +1,233 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "11.0.15" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel1"
+				"maximumSize": new java.awt.Dimension( 210, 30000 )
+				"minimumSize": new java.awt.Dimension( 200, 110 )
+				"preferredSize": new java.awt.Dimension( 210, 500 )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane1"
+					"border": new javax.swing.border.TitledBorder( "连接" )
+					"preferredSize": new java.awt.Dimension( 200, 150 )
+					"maximumSize": new java.awt.Dimension( 200, 32767 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+						"vgap": 10
+					} ) {
+						name: "panel3"
+						"preferredSize": new java.awt.Dimension( 200, 75 )
+						"maximumSize": new java.awt.Dimension( 200, 32767 )
+						"minimumSize": new java.awt.Dimension( 100, 43 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "端口号："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1"
+							"columns": 10
+							"text": "8888"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1"
+							"text": "创建"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2"
+							"text": "销毁"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "创建"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+						name: "panel4"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": "IP地址："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2"
+							"columns": 10
+							"text": "127.0.0.1"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "端口号："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField3"
+							"columns": 10
+							"text": "8888"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button3"
+							"text": "加入"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button5"
+							"text": "退出"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "TuiChuBtn", true ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "加入"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel8"
+					"border": new javax.swing.border.TitledBorder( "" )
+					"maximumSize": &Dimension0 new java.awt.Dimension( 210, 32767 )
+					"preferredSize": new java.awt.Dimension( 210, 170 )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane4"
+						"preferredSize": new java.awt.Dimension( 200, 127 )
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "table1"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "在线人员" )
+							}, new java.util.Vector {
+								add( null )
+							}, new java.util.Vector {
+								add( null )
+							}, new java.util.Vector {
+								add( null )
+							} )
+							"preferredScrollableViewportSize": new java.awt.Dimension( 200, 100 )
+							"rowHeight": 25
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button6"
+						"text": "禁言/解除"
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JinYanBtnClick", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button7"
+						"text": "屏蔽/解除"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PingBiBtnClick", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+				} ) {
+					name: "panel9"
+					"border": new javax.swing.border.TitledBorder( "设置" )
+					"maximumSize": #Dimension0
+					"preferredSize": new java.awt.Dimension( 210, 160 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "昵称："
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField4"
+						"columns": 10
+						"text": "小华"
+						addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "textField4FocusLost", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "格式："
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox1"
+						"text": "B"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 1, 12 )
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox2"
+						"text": "I "
+						"font": new java.awt.Font( "Microsoft YaHei UI", 2, 12 )
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox3"
+						"text": "U"
+					} )
+					add( new FormComponent( "com.jformdesigner.designer.wrapper.HSpacer" ) {
+						name: "hSpacer2"
+						"preferredSize": new java.awt.Dimension( 20, 10 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "颜色："
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button8"
+						"text": " "
+						"background": sfield java.awt.Color black
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button8", true ) )
+					} )
+					add( new FormComponent( "com.jformdesigner.designer.wrapper.HSpacer" ) {
+						name: "hSpacer3"
+						"preferredSize": new java.awt.Dimension( 100, 10 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "字体大小："
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField5"
+						"columns": 4
+						"text": "12"
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) {
+				"vgap": 5
+			} ) {
+				name: "panel6"
+				"border": new javax.swing.border.TitledBorder( "聊天" )
+				"preferredSize": new java.awt.Dimension( 600, 104 )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					"autoscrolls": true
+					add( new FormComponent( "javax.swing.JTextPane" ) {
+						name: "textPane1"
+						"editable": false
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) {
+					"hgap": 5
+					"vgap": 5
+				} ) {
+					name: "panel7"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JTextPane" ) {
+							name: "textPane2"
+							"preferredSize": new java.awt.Dimension( 200, 50 )
+							"margin": new java.awt.Insets( 5, 5, 5, 5 )
+							addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "textPane2KeyPressed", true ) )
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button4"
+						"text": "发送"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button4", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "East"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 855, 560 )
+		} )
+	}
+}
